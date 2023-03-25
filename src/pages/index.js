@@ -31,7 +31,7 @@ import  {Link } from 'react-scroll';
 import {MdEmail} from 'react-icons/md' 
 import {SiLeetcode} from 'react-icons/si'
 import {BsGithub} from 'react-icons/bs'
-
+ 
 export default function Home() {
   const [darkMode,setDarkMode]  = useState(false);
    
@@ -50,7 +50,8 @@ export default function Home() {
             <h1 className='text-xl font-burtons dark:text-white'>developedbyme</h1>
             <ul className='flex items-center'>
               <li><BsMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl dark:text-white '/></li>
-              <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='#'>Resume</a> </li>
+              <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='#'>Resume </a> </li>
+              {/* <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='https://drive.google.com/file/d/1HkpnqL0EEYuQ7nekg0PZr28md0bU6BJl/view?usp=sharing' download="Resume" target="_blank" >download</a> </li> */}
             </ul>
           </nav>
           {/* some about text */}
@@ -135,8 +136,8 @@ export default function Home() {
              className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
               <Image src={insta} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
-              {/* <a href='https://insta-jatin-reels.netlify.app' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a> */}
-              <a href='https://drive.google.com/file/d/1PeItrCScqH4HaVoPx1ZKcY37Ctfm4sru/view?usp=share_link' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
+              <a href='https://reels-jatin-1.web.app/login' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
+              {/* <a href='https://drive.google.com/file/d/1PeItrCScqH4HaVoPx1ZKcY37Ctfm4sru/view?usp=share_link' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a> */}
               <a href='https://github.com/Jatin123lodhi/insta-jatin-reels' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
             </motion.div>
             <motion.div
@@ -169,7 +170,7 @@ export default function Home() {
              className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
               <Image src={portfolio} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
-              <a href='#'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
+              <a href='https://portfolio-jatinlodhi.netlify.app/ ' target="_blank"><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
               <a href='https://github.com/Jatin123lodhi/jatin-portfolio' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
             </motion.div>             
           </div>
@@ -197,11 +198,7 @@ export default function Home() {
             </div>
           </nav>
         </section>
-
-         
-
-         
-
+ 
       </main>
     </div>
   )
