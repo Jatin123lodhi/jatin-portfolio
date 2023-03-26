@@ -72,8 +72,8 @@ export default function Home() {
             <h1 className='text-xl font-burtons dark:text-white'>developedbyme</h1>
             <ul className='flex items-center'>
               <li><BsMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl dark:text-white '/></li>
-              <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='#'>Resume </a> </li>
-              {/* <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='https://drive.google.com/file/d/1HkpnqL0EEYuQ7nekg0PZr28md0bU6BJl/view?usp=sharing' download="Resume" target="_blank" >download</a> </li> */}
+              {/* <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='#'>Resume </a> </li> */}
+              <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='https://drive.google.com/file/d/1HkpnqL0EEYuQ7nekg0PZr28md0bU6BJl/view?usp=sharing' download="Resume" target="_blank" >Resume</a> </li>
             </ul>
           </nav>
           {/* some about text */}
@@ -98,8 +98,8 @@ export default function Home() {
             </p>
           </div>
           <div className='text-5xl flex   justify-center gap-16 text-gray-600 dark:text-gray-300 '>
-            <a href="mailto:jatinlodhi111@gmail.com"><MdEmail /></a>
-            <a href='https://www.linkedin.com/in/jatin-lodhi-407237196/' ><AiFillLinkedin /></a>
+            <a href="mailto:jatinlodhi111@gmail.com" target='_blank'><MdEmail /></a>
+            <a href='https://www.linkedin.com/in/jatin-lodhi-407237196/' target='_blank' ><AiFillLinkedin /></a>
             <a href='https://leetcode.com/jatinlodhi111/' target='_blank' ><SiLeetcode /></a>
             <a href='https://github.com/Jatin123lodhi' target='_blank'><BsGithub /></a>
           </div>
