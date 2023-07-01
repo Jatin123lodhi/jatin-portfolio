@@ -29,7 +29,6 @@ import {FaTools} from 'react-icons/fa'
 import  {BsFillRocketTakeoffFill} from 'react-icons/bs'
 import  {Link } from 'react-scroll';
 import {MdEmail} from 'react-icons/md' 
-import {SiLeetcode} from 'react-icons/si'
 import {BsGithub} from 'react-icons/bs'
 
 export const fadeIn = (direction, delay) => {
@@ -100,10 +99,9 @@ export default function Home() {
           <div className='text-5xl flex   justify-center gap-16 text-gray-600 dark:text-gray-300 '>
             <a href="mailto:jatinlodhi111@gmail.com" target='_blank'><MdEmail /></a>
             <a href='https://www.linkedin.com/in/jatin-lodhi-407237196/' target='_blank' ><AiFillLinkedin /></a>
-            <a href='https://leetcode.com/jatinlodhi111/' target='_blank' ><SiLeetcode /></a>
             <a href='https://github.com/Jatin123lodhi' target='_blank'><BsGithub /></a>
           </div>
-          <div className='bg-gradient-to-b from-teal-500  my-5 rounded-full relative w-80 h-80 mt-20 mx-auto  overflow-hidden md:w-96 md:h-96'>
+          <div className='bg-gradient-to-b from-teal-500  my-5 rounded-full relative w-64 h-64  sm:w-80 sm:h-80 mt-20 mx-auto  overflow-hidden md:w-96 md:h-96'>
             <Image src={deved} fill alt='deved_icon' />
           </div>
          </section>
@@ -114,32 +112,29 @@ export default function Home() {
           </div>
           <div className='my-10 flex flex-wrap lg:flex gap-5 lg:justify-center'>
             <div title='React' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1  my-5 py-4 text-center flex flex-col items-center   shadow-lg rounded-xl  dark:shadow-blue-300'>
-              <Image className='my-4' src={reactIcon} width={100} height={100} />
+              <Image alt="icon" className='my-4' src={reactIcon} width={100} height={100} />
             </div>
             <div title='Javascript' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-yellow-300'>
-              <Image className='my-4 rounded-xl' src={jsIcon} width={100} height={100} />
+              <Image alt="icon" className='my-4 rounded-xl' src={jsIcon} width={100} height={100} />
             </div>
             <div title='HTML5' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-orange-400'>
-              <Image className='my-4' src={htmlIcon} width={100} height={100} />
+              <Image alt="icon" className='my-4' src={htmlIcon} width={100} height={100} />
             </div>
             <div title='CSS3' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-blue-400'>
-              <Image className='my-4' src={cssIcon} width={100} height={100} />
+              <Image alt="icon" className='my-4' src={cssIcon} width={100} height={100} />
             </div>
             <div title='Tailwind' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-teal-300'>
-              <Image className='my-4' src={tailwindIcon} width={100} height={100} />
+              <Image alt="icon" className='my-4' src={tailwindIcon} width={100} height={100} />
             </div>
             <div title='SQL' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-orange-300'>
-              <Image className='my-4 rounded-xl' src={sql} width={100} height={100} />
+              <Image alt="icon" className='my-4 rounded-xl' src={sql} width={100} height={100} />
             </div>
             <div title='Java' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-blue-300'>
-              <Image className='my-4 rounded-xl' src={java} width={100} height={100} />
+              <Image alt="icon" className='my-4 rounded-xl' src={java} width={100} height={100} />
             </div>
             <div title='Firestore' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-yellow-400'>
-              <Image className='my-4 rounded-xl' src={firestore} width={100} height={100} />
+              <Image alt="icon" className='my-4 rounded-xl' src={firestore} width={100} height={100} />
             </div>
-            {/* <div className='my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:bg-gray-200'>
-              <Image className='my-4 border p-1 border-black bg-black rounded-full' src={githubIcon}  width={100} height={100} />
-            </div> */}
              
           </div>
          </section>
@@ -157,7 +152,7 @@ export default function Home() {
              viewport={{once:false,amount:'0.3'}}
              className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image src={insta} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
+              <Image alt="icon" src={insta} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
               <a href='https://reels-jatin-1.web.app/login' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
               {/* <a href='https://drive.google.com/file/d/1PeItrCScqH4HaVoPx1ZKcY37Ctfm4sru/view?usp=share_link' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a> */}
               <a href='https://github.com/Jatin123lodhi/insta-jatin-reels' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
@@ -169,7 +164,7 @@ export default function Home() {
              viewport={{once:false,amount:'0.3'}}
              className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image src={youtube} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
+              <Image alt="icon" src={youtube} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
               <a href='https://jatin-youtube-v1.netlify.app' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
               <a href='https://github.com/Jatin123lodhi/youtube-v1' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
             </motion.div>
@@ -180,7 +175,7 @@ export default function Home() {
              viewport={{once:false,amount:'0.3'}}
              className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image src={food} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
+              <Image alt="icon" src={food} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
               <a href='https://foodvilla-jatin.netlify.app/' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
               <a href='https://github.com/Jatin123lodhi/NamasteReactJatin' target='_blank' ><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
             </motion.div>
@@ -191,7 +186,7 @@ export default function Home() {
              viewport={{once:false,amount:'0.3'}}
              className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
               <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image src={portfolio} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
+              <Image alt="icon" src={portfolio} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
               <a href='https://portfolio-jatinlodhi.netlify.app/ ' target="_blank"><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
               <a href='https://github.com/Jatin123lodhi/jatin-portfolio' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
             </motion.div>             
