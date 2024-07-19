@@ -1,49 +1,52 @@
-import Head from 'next/head'
-import { motion } from "framer-motion"
-import {BsMoonStarsFill } from "react-icons/bs" 
-// import { fadeIn } from './varients'; 
+import Head from "next/head";
+import { motion } from "framer-motion";
+import { BsMoonStarsFill } from "react-icons/bs";
+// import { fadeIn } from './varients';
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillYoutube,
 } from "react-icons/ai";
 import deved from "../public/dev-ed-wave.png";
-import Image from 'next/image';
-import reactIcon from '../public/assets/react.png'
-import jsIcon from '../public/assets/javascript.png'
-import cssIcon from '../public/assets/css.png'
-import tailwindIcon from '../public/assets/tailwind.png'
-import htmlIcon from '../public/assets/html.png'
-import sql from '../public/assets/sql.png'
-import java from '../public/assets/java.png'
-import firestore from '../public/assets/firestore.png'
-import githubIcon from '../public/assets/github.png'
-import youtube from '../public/assets/youtube.png'
-import insta from '../public/assets/insta.png'
-import food from '../public/assets/food.png'
-import portfolio from '../public/assets/portfolio.png'
-import { useState } from 'react';
-import Typewriter from 'typewriter-effect';
-import {FaHome} from 'react-icons/fa'
-import {FaTools} from 'react-icons/fa'
-import  {BsFillRocketTakeoffFill} from 'react-icons/bs'
-import  {Link } from 'react-scroll';
-import {MdEmail} from 'react-icons/md' 
-import {BsGithub} from 'react-icons/bs'
+import Image from "next/image";
+import reactIcon from "../public/assets/react.png";
+import jsIcon from "../public/assets/javascript.png";
+import cssIcon from "../public/assets/css.png";
+import tailwindIcon from "../public/assets/tailwind.png";
+import htmlIcon from "../public/assets/html.png";
+import sql from "../public/assets/sql.png";
+import java from "../public/assets/java.png";
+import firestore from "../public/assets/firestore.png";
+import githubIcon from "../public/assets/github.png";
+import youtube from "../public/assets/youtube.png";
+import insta from "../public/assets/insta.png";
+import food from "../public/assets/food.png";
+import cms from "../public/assets/portfolio/cms.png"
+import portfolio from "../public/assets/portfolio.png";
+import hi from "../public/assets/portfolio/honestInsights.png"
+import socio from "../public/assets/portfolio/socio.png"
+import { useState } from "react";
+import Typewriter from "typewriter-effect";
+import { FaHome } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
+import { BsFillRocketTakeoffFill } from "react-icons/bs";
+import { Link } from "react-scroll";
+import { MdEmail } from "react-icons/md";
+import { BsGithub } from "react-icons/bs";
 
 export const fadeIn = (direction, delay) => {
   return {
     hidden: {
-      y: direction === 'up' ? 80 : direction === 'down' ? -80 : 0,
+      y: direction === "up" ? 80 : direction === "down" ? -80 : 0,
       opacity: 0,
-      x: direction === 'left' ? 80 : direction === 'right' ? -80 : 0,
+      x: direction === "left" ? 80 : direction === "right" ? -80 : 0,
     },
     show: {
       y: 0,
       x: 0,
       opacity: 1,
       transition: {
-        type: 'tween',
+        type: "tween",
         duration: 1.2,
         delay: delay,
         ease: [0.25, 0.25, 0.25, 0.75],
@@ -52,10 +55,9 @@ export const fadeIn = (direction, delay) => {
   };
 };
 
-
 export default function Home() {
-  const [darkMode,setDarkMode]  = useState(false);
-   
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -64,159 +66,396 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className='bg-white px-10 md:px-20  lg:px-32 dark:bg-black' >
-         <section id='home' className='min-h-screen '>
+      <main className="bg-white px-10 md:px-20  lg:px-32 dark:bg-black">
+        <section id="home" className="min-h-screen ">
           {/* navbar - 1 */}
-          <nav className=' flex justify-between py-10 mb-12'>
-            <h1 className='text-xl font-burtons dark:text-white'>developedbyme</h1>
-            <ul className='flex items-center'>
-              <li><BsMoonStarsFill onClick={()=>setDarkMode(!darkMode)} className='cursor-pointer text-xl dark:text-white '/></li>
+          <nav className=" flex justify-between py-10 mb-12">
+            <h1 className="text-xl font-burtons dark:text-white">
+              developedbyme
+            </h1>
+            <ul className="flex items-center">
+              <li>
+                <BsMoonStarsFill
+                  onClick={() => setDarkMode(!darkMode)}
+                  className="cursor-pointer text-xl dark:text-white "
+                />
+              </li>
               {/* <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='#'>Resume </a> </li> */}
-              <li className='ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1'><a href='https://drive.google.com/file/d/1HkpnqL0EEYuQ7nekg0PZr28md0bU6BJl/view?usp=sharing' download="Resume" target="_blank" >Resume</a> </li>
+              <li className="ml-4 bg-gradient-to-r from-cyan-500 to-teal-500 text-white rounded px-4 py-1">
+                <a
+                  href="https://drive.google.com/file/d/1anfsgu_NuJsbnHlDls-SVysIzTFHcDFZ/view?usp=sharing"
+                  download="Resume"
+                  target="_blank"
+                >
+                  Resume
+                </a>{" "}
+              </li>
             </ul>
           </nav>
           {/* some about text */}
-          <div className=' text-center p-10'>
-            <h2 className='text-4xl py-2 text-teal-600 font-medium md:text-6xl'>Jatin Lodhi</h2>
+          <div className=" text-center p-10">
+            <h2 className="text-4xl py-2 text-teal-600 font-medium md:text-6xl">
+              Jatin Lodhi
+            </h2>
 
             {/* typewritter effect */}
-             
-            <h3 className='text-2xl py-2 md:text-3xl dark:text-white'>
-                
+
+            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
               <Typewriter
                 options={{
-                  strings: ['I am a frontend developer', 'I love❤️ to build things '],
+                  strings: [
+                    "I am a frontend developer",
+                    "I love❤️ to build things ",
+                  ],
                   autoStart: true,
                   loop: true,
                 }}
-              />  
+              />
             </h3>
-            <p className='py-5 leading-8 text-gray-800 max-w-xl mx-auto dark:text-gray-400'>
-              Hello I'm a Frontend developer providing services for programming and design content
-              needs. Join me down below and let's get cracking!
+            <p className="py-5 leading-8 text-gray-800 max-w-xl mx-auto dark:text-gray-400">
+              Hello I'm a Frontend developer providing services for programming
+              and design content needs. Join me down below and let's get
+              cracking!
             </p>
           </div>
-          <div className='text-5xl flex   justify-center gap-16 text-gray-600 dark:text-gray-300 '>
-            <a href="mailto:jatinlodhi111@gmail.com" target='_blank'><MdEmail /></a>
-            <a href='https://www.linkedin.com/in/jatin-lodhi-407237196/' target='_blank' ><AiFillLinkedin /></a>
-            <a href='https://github.com/Jatin123lodhi' target='_blank'><BsGithub /></a>
+          <div className="text-5xl flex   justify-center gap-16 text-gray-600 dark:text-gray-300 ">
+            <a href="mailto:jatinlodhi111@gmail.com" target="_blank">
+              <MdEmail />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/jatin-lodhi-407237196/"
+              target="_blank"
+            >
+              <AiFillLinkedin />
+            </a>
+            <a href="https://github.com/Jatin123lodhi" target="_blank">
+              <BsGithub />
+            </a>
           </div>
-          <div className='bg-gradient-to-b from-teal-500  my-5 rounded-full relative w-64 h-64  sm:w-80 sm:h-80 mt-20 mx-auto  overflow-hidden md:w-96 md:h-96'>
-            <Image src={deved} fill alt='deved_icon' />
+          <div className="bg-gradient-to-b from-teal-500  my-5 rounded-full relative w-64 h-64  sm:w-80 sm:h-80 mt-20 mx-auto  overflow-hidden md:w-96 md:h-96">
+            <Image src={deved} fill alt="deved_icon" />
           </div>
-         </section>
+        </section>
 
-         <section id='skill'>
+        <section id="skill">
           <div>
-            <h3 className='text-3xl py-1 dark:text-white'>Skills </h3>
+            <h3 className="text-3xl py-1 dark:text-white">Skills </h3>
           </div>
-          <div className='my-10 flex flex-wrap lg:flex gap-5 lg:justify-center'>
-            <div title='React' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1  my-5 py-4 text-center flex flex-col items-center   shadow-lg rounded-xl  dark:shadow-blue-300'>
-              <Image alt="icon" className='my-4' src={reactIcon} width={100} height={100} />
+          <div className="my-10 flex flex-wrap lg:flex gap-5 lg:justify-center">
+            <div
+              title="React"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1  my-5 py-4 text-center flex flex-col items-center   shadow-lg rounded-xl  dark:shadow-blue-300"
+            >
+              <Image
+                alt="icon"
+                className="my-4"
+                src={reactIcon}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='Javascript' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-yellow-300'>
-              <Image alt="icon" className='my-4 rounded-xl' src={jsIcon} width={100} height={100} />
+            <div
+              title="Javascript"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-yellow-300"
+            >
+              <Image
+                alt="icon"
+                className="my-4 rounded-xl"
+                src={jsIcon}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='HTML5' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-orange-400'>
-              <Image alt="icon" className='my-4' src={htmlIcon} width={100} height={100} />
+            <div
+              title="HTML5"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-orange-400"
+            >
+              <Image
+                alt="icon"
+                className="my-4"
+                src={htmlIcon}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='CSS3' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-blue-400'>
-              <Image alt="icon" className='my-4' src={cssIcon} width={100} height={100} />
+            <div
+              title="CSS3"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-blue-400"
+            >
+              <Image
+                alt="icon"
+                className="my-4"
+                src={cssIcon}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='Tailwind' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-teal-300'>
-              <Image alt="icon" className='my-4' src={tailwindIcon} width={100} height={100} />
+            <div
+              title="Tailwind"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-teal-300"
+            >
+              <Image
+                alt="icon"
+                className="my-4"
+                src={tailwindIcon}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='SQL' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-orange-300'>
-              <Image alt="icon" className='my-4 rounded-xl' src={sql} width={100} height={100} />
+            <div
+              title="SQL"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-orange-300"
+            >
+              <Image
+                alt="icon"
+                className="my-4 rounded-xl"
+                src={sql}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='Java' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-blue-300'>
-              <Image alt="icon" className='my-4 rounded-xl' src={java} width={100} height={100} />
+            <div
+              title="Java"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-blue-300"
+            >
+              <Image
+                alt="icon"
+                className="my-4 rounded-xl"
+                src={java}
+                width={100}
+                height={100}
+              />
             </div>
-            <div title='Firestore' className='cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-yellow-400'>
-              <Image alt="icon" className='my-4 rounded-xl' src={firestore} width={100} height={100} />
+            <div
+              title="Firestore"
+              className="cursor-pointer basis-1/3 lg:basis-1/5 flex-1 my-5 py-4 text-center flex flex-col items-center shadow-lg rounded-xl dark:shadow-yellow-400"
+            >
+              <Image
+                alt="icon"
+                className="my-4 rounded-xl"
+                src={firestore}
+                width={100}
+                height={100}
+              />
             </div>
-             
           </div>
-         </section>
-         <section id='project' className='pb-20'>
-          <div className='mb-4'>
-              <h3 className="text-3xl py-1 dark:text-white ">Projects</h3>
+        </section>
+        <section id="project" className="pb-20">
+          <div className="mb-4">
+            <h3 className="text-3xl py-1 dark:text-white ">Projects</h3>
           </div>
-          <div className='flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap'>
-            
-            
+          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <motion.div
-             variants={fadeIn('right','0.3')}
-             initial='hidden'
-             whileInView='show'
-             viewport={{once:false,amount:'0.3'}}
-             className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
-              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image alt="icon" src={insta} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
-              <a href='https://reels-jatin-1.web.app/login' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
-              {/* <a href='https://drive.google.com/file/d/1PeItrCScqH4HaVoPx1ZKcY37Ctfm4sru/view?usp=share_link' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a> */}
-              <a href='https://github.com/Jatin123lodhi/insta-jatin-reels' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
+              variants={fadeIn("right", "0.3")}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "0.3" }}
+              className="group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400"
+            >
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              <Image
+                alt="icon"
+                src={insta}
+                className="group-hover:scale-125 transition-all duration-500 rounded-xl   "
+              />
+              <a
+                href="https://insta-jatin-reels.netlify.app/login"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500">
+                  Live
+                </div>
+              </a>
+              <a
+                href="https://github.com/Jatin123lodhi/insta-jatin-reels"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700">
+                  Code{" "}
+                </div>
+              </a>
             </motion.div>
             <motion.div
-             variants={fadeIn('left','0.3')}
-             initial='hidden'
-             whileInView='show'
-             viewport={{once:false,amount:'0.3'}}
-             className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
-              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image alt="icon" src={youtube} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
-              <a href='https://jatin-youtube-v1.netlify.app' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
-              <a href='https://github.com/Jatin123lodhi/youtube-v1' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
+              variants={fadeIn("left", "0.3")}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "0.3" }}
+              className="group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400"
+            >
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              <Image
+                alt="icon"
+                src={youtube}
+                className="group-hover:scale-125 transition-all duration-500 rounded-xl   "
+              />
+              <a href="https://jatin-youtube-v1.netlify.app" target="_blank">
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500">
+                  Live
+                </div>
+              </a>
+              <a
+                href="https://github.com/Jatin123lodhi/youtube-v1"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700">
+                  Code{" "}
+                </div>
+              </a>
             </motion.div>
             <motion.div
-             variants={fadeIn('right','0.3')}
-             initial='hidden'
-             whileInView='show'
-             viewport={{once:false,amount:'0.3'}}
-             className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
-              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image alt="icon" src={food} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
-              <a href='https://foodvilla-jatin.netlify.app/' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
-              <a href='https://github.com/Jatin123lodhi/NamasteReactJatin' target='_blank' ><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
+              variants={fadeIn("right", "0.3")}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "0.3" }}
+              className="group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400"
+            >
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              <Image
+                alt="icon"
+                src={cms}
+                className="group-hover:scale-125 transition-all duration-500 rounded-xl   "
+              />
+              <a href="https://blogwebsitecms.000webhostapp.com/posts.php" target="_blank">
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500">
+                  Live
+                </div>
+              </a>
+              <a
+                href="https://github.com/Jatin123lodhi/BlogDetailsBackendPHP"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700">
+                  Code{" "}
+                </div>
+              </a>
             </motion.div>
             <motion.div
-             variants={fadeIn('left','0.3')}
-             initial='hidden'
-             whileInView='show'
-             viewport={{once:false,amount:'0.3'}}
-             className='group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400'>
-              <div className='group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300'></div>
-              <Image alt="icon" src={portfolio} className="group-hover:scale-125 transition-all duration-500 rounded-xl   " />
-              <a href='https://portfolio-jatinlodhi.netlify.app/ ' target="_blank"><div className='cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500'>Live</div></a>
-              <a href='https://github.com/Jatin123lodhi/jatin-portfolio' target='_blank'><div className='cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700'>Code </div></a>
-            </motion.div>             
+              variants={fadeIn("left", "0.3")}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "0.3" }}
+              className="group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400"
+            >
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              <Image
+                alt="icon"
+                src={portfolio}
+                className="group-hover:scale-125 transition-all duration-500 rounded-xl   "
+              />
+              <a
+                href="https://portfolio-jatinlodhi.netlify.app/ "
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500">
+                  Live
+                </div>
+              </a>
+              <a
+                href="https://github.com/Jatin123lodhi/jatin-portfolio"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700">
+                  Code{" "}
+                </div>
+              </a>
+            </motion.div>
+            <motion.div
+              variants={fadeIn("right", "0.3")}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "0.3" }}
+              className="group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400"
+            >
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              <Image
+                alt="icon"
+                src={hi}
+                className="group-hover:scale-125 transition-all duration-500 rounded-xl   "
+              />
+              <a
+                href="https://honest-insights.vercel.app/ "
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500">
+                  Live
+                </div>
+              </a>
+              <a
+                href="https://github.com/Jatin123lodhi/HonestInsights"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700">
+                  Code{" "}
+                </div>
+              </a>
+            </motion.div>
+            <motion.div
+              variants={fadeIn("left", "0.3")}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: "0.3" }}
+              className="group relative overflow-hidden basis-1/3 flex-1  rounded-xl shadow-lg  dark:shadow-md dark:shadow-blue-400"
+            >
+              <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>
+              <Image
+                alt="icon"
+                src={socio}
+                className="group-hover:scale-125 transition-all duration-500 rounded-xl   "
+              />
+              <a
+                href="https://sociopedia-mern-app-nsg8.vercel.app/"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-1/3 z-40 group-hover:bottom-1/2 transition-all duration-500">
+                  Live
+                </div>
+              </a>
+              <a
+                href="https://github.com/Jatin123lodhi/sociopedia"
+                target="_blank"
+              >
+                <div className="cursor-pointer text-xl text-white absolute -bottom-full left-2/3 z-40 group-hover:bottom-1/2  transition-all duration-700">
+                  Code{" "}
+                </div>
+              </a>
+            </motion.div>
           </div>
-         </section>
+        </section>
 
-        {/* <section>
-          <nav>
-            <div className='mx-auto'>
-              <Link> {<BiHomeAlt/>}  </Link>
-            </div>
-          </nav>
-        </section> */}
-        <section >
-          <nav className='fixed left-0 bottom-4 lg:bottom-8 w-full overflow-hidden z-50 '>
-            <div className='mx-auto w-80 bg-black/10 h-12 backdrop-blur-sm rounded-3xl flex justify-between '>
-              <Link to='home' smooth={true} activeClass='active' spy={true}  className=' flex items-center px-2 mx-8 text-2xl cursor-pointer dark:border-white'>
-                <FaHome className='dark:text-white'/>
+        <section>
+          <nav className="fixed left-0 bottom-4 lg:bottom-8 w-full overflow-hidden z-50 ">
+            <div className="mx-auto w-80 bg-black/10 h-12 backdrop-blur-sm rounded-3xl flex justify-between ">
+              <Link
+                to="home"
+                smooth={true}
+                activeClass="active"
+                spy={true}
+                className=" flex items-center px-2 mx-8 text-2xl cursor-pointer dark:border-white"
+              >
+                <FaHome className="dark:text-white" />
               </Link>
-              <Link to='skill' smooth={true} activeClass='active' spy={true}  className=' flex items-center px-2 mx-8 text-2xl cursor-pointer dark:border-white '>
-                <FaTools className='dark:text-white'/>
+              <Link
+                to="skill"
+                smooth={true}
+                activeClass="active"
+                spy={true}
+                className=" flex items-center px-2 mx-8 text-2xl cursor-pointer dark:border-white "
+              >
+                <FaTools className="dark:text-white" />
               </Link>
-              <Link to='project' smooth={true} activeClass='active' spy={true}  className=' flex items-center px-2 mx-8 text-2xl cursor-pointer dark:border-white'>
-                <BsFillRocketTakeoffFill className='dark:text-white'/>
+              <Link
+                to="project"
+                smooth={true}
+                activeClass="active"
+                spy={true}
+                className=" flex items-center px-2 mx-8 text-2xl cursor-pointer dark:border-white"
+              >
+                <BsFillRocketTakeoffFill className="dark:text-white" />
               </Link>
             </div>
           </nav>
         </section>
- 
       </main>
     </div>
-  )
+  );
 }
